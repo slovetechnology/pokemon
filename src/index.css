@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollsdown::-webkit-scrollbar {
+    height: 0px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.data::before {
+    content: '';
+    position: absolute;
+    top: -15%;
+    right: -5%;
+    background-color: rgba(0, 0, 255, 0.299);
+    filter: blur(30px);
+    width: 30vw;
+    height: 50vh;
+    border-radius: 50%;
+}
+.data::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: -5%;
+    background-color: rgba(0, 0, 255, 0.174);
+    filter: blur(30px);
+    width: 30vw;
+    height: 50vh;
+    border-radius: 50%;
+}
