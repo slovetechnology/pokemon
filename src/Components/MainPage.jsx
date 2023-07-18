@@ -16,6 +16,7 @@ export default function MainPage() {
         header: true,
         download: true,
         complete: (result) => {
+          console.log(result.data)
           return setPokes(result.data);
         }
       }
