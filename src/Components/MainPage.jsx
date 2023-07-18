@@ -3,14 +3,14 @@ import Papa from 'papaparse'
 import { useCallback, useEffect, useState } from 'react';
 import SingleData from '../Components/SingleData';
 
+const commonConfig = { delimiter: "," }
 
 export default function MainPage() {
   const [pokes, setPokes] = useState([])
-  const commonConfig = { delimiter: "," }
 
   const fetchPokemons = useCallback(() => {
     Papa.parse(
-      "../src/assets/pokemon.csv",
+      "/src/assets/pokemon.csv",
       {
         ...commonConfig,
         header: true,
