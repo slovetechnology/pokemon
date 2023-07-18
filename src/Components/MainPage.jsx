@@ -64,20 +64,22 @@ export default function MainPage() {
             </table>
           </div>
         </div>
-        <div className="w-11/12 mx-auto border-l-2 px-4 overflow-x-auto mt-5 border-zinc-400 h-[75vh] scrollsdown">
-          <div className="w-fit flex flex-row items-end gap-5 px-2 pb-10 relative h-full justify-center">
-            {pokes.map((item, i) => (
-              <SingleData
-                key={i}
-                attack={`${item.Attack}px`}
-                defense={`${item.Defense}px`}
-                hp={`${item.HP}px`}
-                speed={`${item.Speed}px`}
-                total={`${item.Total / 10}px`}
-                image={item.image_url}
-                name={item.Names}
-              />
-            ))}
+        <div className="flex items-center justify-end h-screen">
+          <div className="w-11/12 mx-auto border-l-2 px-4 overflow-x-auto mt-5 border-zinc-400 h-[95vh] scrollsdown">
+            <div className="w-fit flex flex-row items-end gap-5 px-2 pb-10 relative h-full justify-center">
+              {pokes.map((item, i) => (
+                <SingleData
+                  key={i}
+                  attack={`${item.Attack}px`}
+                  defense={`${item.Defense}px`}
+                  hp={`${item.HP}px`}
+                  speed={`${item.Speed}px`}
+                  total={`${item.Total / 10}px`}
+                  image={item.image_url}
+                  name={item.Names}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
