@@ -12,7 +12,7 @@ export default function MainPage() {
     Papa.parse(
       "/src/assets/pokemon.csv",
       {
-        ...commonConfig,
+        // ...commonConfig,
         header: true,
         download: true,
         complete: (result) => {
