@@ -2,26 +2,27 @@
 import Papa from 'papaparse'
 import { useCallback, useEffect, useState } from 'react';
 import SingleData from '../Components/SingleData';
+import { Pokemons } from '../assets/PokeMon';
 
 const commonConfig = { delimiter: "," }
 
 export default function MainPage() {
-  const [pokes, setPokes] = useState([])
+  // const [pokes, setPokes] = useState([])
 
-  const fetchPokemons = useCallback(() => {
-    Papa.parse(
-      "/src/assets/pokemon.csv",
-      {
-        // ...commonConfig,
-        header: true,
-        download: true,
-        complete: (result) => {
-          console.log(result.data)
-          return setPokes(result.data);
-        }
-      }
-    );
-  }, [])
+  // const fetchPokemons = useCallback(() => {
+  //   Papa.parse(
+  //     "/src/assets/pokemon.csv",
+  //     {
+  //       // ...commonConfig,
+  //       header: true,
+  //       download: true,
+  //       complete: (result) => {
+  //         console.log(result.data)
+  //         return setPokes(result.data);
+  //       }
+  //     }
+  //   );
+  // }, [])
 
 
   const TableData = [
@@ -47,7 +48,7 @@ export default function MainPage() {
     },
   ]
 
-  useEffect(() => { fetchPokemons() }, [fetchPokemons])
+  // useEffect(() => { fetchPokemons() }, [fetchPokemons])
   return (
     <div className='data'>
       <div className="dataset bg-blue-100/60 h-screen overflow-y-auto backdrop-blur-lg">
@@ -68,7 +69,7 @@ export default function MainPage() {
         <div className="flex items-center justify-end h-screen">
           <div className="w-11/12 mx-auto border-l-2 px-4 overflow-x-auto mt-5 border-zinc-400 h-[95vh] scrollsdown">
             <div className="w-fit flex flex-row items-end gap-5 px-2 pb-10 relative h-full justify-center">
-              {pokes.map((item, i) => (
+              {Pokemons.map((item, i) => (
                 <SingleData
                   key={i}
                   attack={`${item.Attack}px`}
