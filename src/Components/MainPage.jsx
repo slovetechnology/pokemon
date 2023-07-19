@@ -6,7 +6,7 @@ export default function MainPage() {
   const TableData = [
     {
       tag: 'Total',
-      bg: 'bg-[#1e2762]'
+      bg: 'bg-blue-500'
     },
     {
       tag: 'Attack',
@@ -32,6 +32,7 @@ export default function MainPage() {
       tag: 'Sp Def',
       bg: 'bg-[#fc766a]'
     },
+    {},
   ]
 
 
@@ -44,15 +45,20 @@ export default function MainPage() {
               <tbody>
                 {TableData.map((item, i) => (
                   <tr className='rounded-lg border-b' key={i}>
-                    <td className='text-xs p-2 text-slate-600'>{item.tag}</td>
-                    <td className='p-2 flex items-center justify-end'> <div className={`h-4 rounded-md w-4 ${item.bg}`}></div> </td>
+                    <td className='text-xs p-1.5 text-slate-600'>{item.tag}</td>
+                    <td className='p-1.5 flex items-center justify-end'> <div className={`h-4 rounded-md w-4 ${item.bg}`}></div> </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
         </div>
-        <div className="flex items-center justify-end h-screen">
+        <div className="flex items-center w-11/12 mx-auto justify-end h-screen">
+          <div className="flex flex-col justify-end h-screen">
+            {TableData.map((item, i) => (
+              <div className="h-[3.5rem]" key={i}>{item.tag}</div>
+            ))}
+          </div>
           <div className="w-11/12 mx-auto border-l-2 border-b-2 px-4 overflow-x-auto border-zinc-400 h-[95vh] scrollsdown">
             <div className="w-fit flex flex-row items-end gap-5 px-2 relative h-full justify-center">
               {Pokemons.map((item, i) => (

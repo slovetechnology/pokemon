@@ -1,5 +1,6 @@
-import React from 'react'
 
+
+// eslint-disable-next-line
 const DataComponent = ({title, tag, height, color, data}) => {
     const width = `2.5rem`
     return (
