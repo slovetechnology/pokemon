@@ -6,25 +6,34 @@ export default function MainPage() {
   const TableData = [
     {
       tag: 'Total',
-      bg: 'bg-orange-400'
+      bg: 'bg-[#1e2762]'
     },
     {
       tag: 'Attack',
-      bg: 'bg-teal-400'
+      bg: 'bg-[#faf8bf]'
     },
     {
-      tag: 'Defanse',
-      bg: 'bg-red-400'
+      tag: 'Defense',
+      bg: 'bg-[#2d5f2e]'
     },
     {
       tag: 'HP',
-      bg: 'bg-yellow-400'
+      bg: 'bg-[#ab96db]'
     },
     {
       tag: 'Speed',
-      bg: 'bg-blue-400'
+      bg: 'bg-[#ffa252]'
+    },
+    {
+      tag: 'Sp Atk',
+      bg: 'bg-cyan-400'
+    },
+    {
+      tag: 'Sp Def',
+      bg: 'bg-[#fc766a]'
     },
   ]
+
 
   return (
     <div className='data'>
@@ -44,8 +53,8 @@ export default function MainPage() {
           </div>
         </div>
         <div className="flex items-center justify-end h-screen">
-          <div className="w-11/12 mx-auto border-l-2 px-4 overflow-x-auto mt-5 border-zinc-400 h-[80vh] scrollsdown">
-            <div className="w-fit flex flex-row items-end gap-5 px-2 pb-10 relative h-full justify-center">
+          <div className="w-11/12 mx-auto border px-4 overflow-x-auto border-zinc-400 h-[95vh] scrollsdown">
+            <div className="w-fit flex flex-row items-end gap-5 px-2 relative h-full justify-center">
               {Pokemons.map((item, i) => (
                 <SingleData
                   key={i}
@@ -54,6 +63,8 @@ export default function MainPage() {
                   hp={`${item.HP}px`}
                   speed={`${item.Speed}px`}
                   total={`${item.Total / 10}px`}
+                  spDef={`${item.SpDef}px`}
+                  spAtk={`${item.SpAtk}px`}
                   image={item.image_url}
                   name={item.Names}
                 />

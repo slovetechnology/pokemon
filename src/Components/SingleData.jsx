@@ -1,17 +1,22 @@
 import React from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-const SingleData = ({ attack, defense, hp, name, speed, image, total }) => {
-    const width = `2rem`
+const SingleData = ({ attack, defense, hp, name, speed, image, total, spAtk, spDef }) => {
+    const width = `2.5rem`
+    const calc = (val) => {
+        return `${parseInt(val) /10}vh`
+    }
     return (
         <div className='relative'>
-            <div className="h-fit relative w-[4rem] flex items-center justify-center flex-col">
-                <div className="bg-white break-words rounded-md text-xs absolute -top-12 left-0 min-w-[5rem] font-semibold txt-slate-600 shadow-xl text-center px-2 py-1.5">{name}</div>
-                <div title="Total" className='bg-orange-400 shadow-xl rounded-tr-lg rounded-tl-lg' style={{ width: width, height: total }}></div>
-                <div title="Attack" className='bg-teal-400 shadow-xl' style={{ width: width, height: attack }}></div>
-                <div title="Defense" className='bg-red-400 shadow-xl' style={{ width: width, height: defense }}></div>
-                <div title="HP" className='bg-yellow-400 shadow-xl' style={{ width: width, height: hp }}></div>
-                <div title="Speed" className='bg-blue-400 shadow-xl rounded-br-lg rounded-bl-lg' style={{ width: width, height: speed }}></div>
+            <div className="h-fit relative w-[3.5rem] flex items-center justify-center flex-col">
+                <div className="bg-white break-words rounded-md text-xs min-w-[5rem] font-semibold txt-slate-600 shadow-xl text-center px-2 py-1.5">{name}</div>
+                <div title="Total" className='bg-[#1e2762] shadow-xl rounded-tr-lg rounded-tl-lg' style={{ width: width, height: calc(total) }}></div>
+                <div title="Attack" className='bg-[#faf8bf] shadow-xl' style={{ width: width, height: calc(attack) }}></div>
+                <div title="Defense" className='bg-[#2d5f2e] shadow-xl' style={{ width: width, height: calc(defense) }}></div>
+                <div title="HP" className='bg-[#ab96db] shadow-xl' style={{ width: width, height: calc(hp) }}></div>
+                <div title="Speed" className='bg-[#ffa252] shadow-xl' style={{ width: width, height: calc(speed) }}></div>
+                <div title="Sp Attack" className='bg-cyan-400 shadow-xl' style={{ width: width, height: calc(spAtk) }}></div>
+                <div title="Sp Defense" className='bg-[#fc766a] shadow-xl rounded-br-lg rounded-bl-lg' style={{ width: width, height: calc(spDef) }}></div>
                 <div className=""> <LazyLoadImage effect="blur" src={image} alt="" style={{ width: '7rem' }} className="w-full object-contain" /> </div>
             </div>
             {/* <div className="text-xs uppercase text-slate-600 absolute z-10 -bottom-10 rotate-90 left-0"> {name} </div> */}
