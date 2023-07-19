@@ -58,13 +58,13 @@ export default function MainPage() {
               {Pokemons.map((item, i) => (
                 <SingleData
                   key={i}
-                  attack={`${item.Attack}px`}
-                  defense={`${item.Defense}px`}
-                  hp={`${item.HP}px`}
-                  speed={`${item.Speed}px`}
-                  total={`${item.Total / 10}px`}
-                  spDef={`${item.SpDef}px`}
-                  spAtk={`${item.SpAtk}px`}
+                  attack={`${item.Attack}`}
+                  defense={`${item.Defense}`}
+                  hp={`${item.HP}`}
+                  speed={`${item.Speed}`}
+                  total={`${item.Total / 10}`}
+                  spDef={`${item.SpDef}`}
+                  spAtk={`${item.SpAtk}`}
                   image={item.image_url}
                   name={item.Names}
                 />
