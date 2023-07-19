@@ -34,8 +34,6 @@ export default function MainPage() {
     },
   ]
 
-  console.log(Pokemons)
-
 
   return (
     <div className='data'>
