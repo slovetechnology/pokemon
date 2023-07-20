@@ -22,11 +22,11 @@ Generally speaking, there was a spark and a willingness to explore different arr
 
 
 Libraries Used:
-Reactjs
-Vite
-XAMPP
-React-lazy-load-image-component
-Tailwindcss
+Reactjs,
+Vite,
+XAMPP,
+React-lazy-load-image-component,
+Tailwindcss.
 
 
 
