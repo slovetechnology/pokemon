@@ -54,13 +54,13 @@ export default function MainPage() {
           </div>
         </div>
         <div className="flex items-center w-11/12 mx-auto justify-end h-screen">
-          <div className="flex flex-col justify-end h-screen">
+          <div className="flex flex-col justify-end  h-[70vh] md:h-[95vh]">
             {TableData.map((item, i) => (
-              <div className="h-[3.5rem]" key={i}>{item.tag}</div>
+              <div className="h-[3.5rem] text-sm drop-shadow-sm" key={i}>{item.tag}</div>
             ))}
           </div>
-          <div className="w-11/12 mx-auto border-l-2 border-b-2 px-4 overflow-x-auto border-zinc-400 h-[95vh] scrollsdown">
-            <div className="w-fit flex flex-row items-end gap-5 px-2 relative h-full justify-center">
+          <div className="w-11/12 mx-auto border-l-2 border-b-2 px-4 overflow-x-auto border-zinc-400 h-[70vh] md:h-[95vh] scrollsdown">
+            <div className="w-fit flex flex-row items-end gap-5 pl-2 relative h-full justify-center">
               {Pokemons.map((item, i) => (
                 <SingleData
                   key={i}
