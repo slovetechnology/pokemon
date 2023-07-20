@@ -1,3 +1,4 @@
+# Pokemon Data Virtualization
 Data Story:
 At first, we were given a CSV document to work with and produce an outcome. To accomplish the desired result in JSON format, we explored accessible solutions and found a tool called "Papaparse," a library fit for changing over CSV files into JSON. While this library worked completely in the development server, we experienced issues while deploying it to the production server, as it was not suitable for that environment. This prompted us to rethink our methodology and find an answer that would be viable with both development and production servers.
 
@@ -26,7 +27,7 @@ Vite
 XAMPP
 React-lazy-load-image-component
 Tailwindcss
-# pokemon
+
 
 
 Screenrecord with Audio:
