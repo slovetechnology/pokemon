@@ -27,3 +27,8 @@ XAMPP
 React-lazy-load-image-component
 Tailwindcss
 # pokemon
+
+
+Screenrecord with Audio:
+https://github.com/slovetechnology/pokemon/assets/111425488/0605aff9-cd6a-4f72-b558-94d4fc206cdd
+
